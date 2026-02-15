@@ -1,4 +1,4 @@
-# 42 Core Curriculum Projects
+# 42 Piscine C
 
 This repository contains my work for the **42 core curriculum**.
 
