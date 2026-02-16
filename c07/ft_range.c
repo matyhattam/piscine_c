@@ -6,6 +6,7 @@ int *ft_range(int min, int max) {
   int i = 0;
 
   if (min > max) {
+    array = NULL;
     return 0;
   }
 
