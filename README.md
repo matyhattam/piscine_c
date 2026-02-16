@@ -1,30 +1,31 @@
-# 42 Piscine C
+# 42 Core Curriculum Projects
 
 This repository contains my work for the **42 core curriculum**.
 
 ## Description
 
-The goal of this project is to complete **all the core cursus projects of 42**.
-Each directory corresponds to a specific part of the curriculum.
+The purpose of this repository is to complete **all the core cursus projects of 42** while building strong and reliable fundamentals in programming.
+
+I am currently working on this project to develop **very solid basics in C and C++**, with the objective of getting closer to **low-level programming** and eventually **embedded systems development**.
 
 ### Current Project
 
-The current work in this repository focuses on the **C Piscine exercises** provided by 42.
-These exercises are designed to build a strong foundation in:
-- C programming
-- Problem solving
-- Logic and algorithms
-- Unix basics and coding standards
+The current focus is on the **C Piscine exercises** provided by 42.
+These exercises are designed to strengthen:
+- C programming fundamentals
+- Memory management and pointers
+- Algorithmic thinking
+- Low-level concepts and coding discipline
 
 ## Structure
 
-- Each folder represents an exercise or a set of exercises from the C Piscine.
-- Files follow the conventions and requirements defined by 42.
+- Each folder corresponds to a specific exercise or project.
+- Files follow the norms and requirements defined by 42.
 
 ## Status
 
-🚧 In progress — C Piscine exercises are currently being completed.
+🚧 In progress — C Piscine exercises.
 
 ## Notes
 
-This repository is for educational purposes and personal progress tracking as part of the 42 curriculum.
+This repository is intended for learning, experimentation, and tracking progress throughout the 42 core curriculum.
