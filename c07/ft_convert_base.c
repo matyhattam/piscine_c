@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
 
 int ft_strlen(char *str) {
   int i = 0;
@@ -10,8 +9,6 @@ int ft_strlen(char *str) {
   }
   return i;
 }
-
-void ft_putchar(char c) { write(1, &c, 1); }
 
 void ft_rev_array(char *arr, int size) {
   int i = 0;
@@ -71,6 +68,7 @@ char *ft_convert_base(char *nbr, char *base_from, char *base_to) {
   ft_rev_array(converted_number, ft_strlen(converted_number));
   return converted_number;
 }
+
 int main(void) {
   char *nbr = "53252";
   char *base_from = "0";
