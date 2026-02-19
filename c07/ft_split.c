@@ -28,33 +28,38 @@ char **ft_split(char *str, char *charset) {
   int j = 0;
   int k = 0;
 
+  int str_len = ft_strlen(str);
   int split_len = 0;
 
-  while (str[i] != '\0') {
+  while (i <= str_len) {
     int l = 0;
-    while (str[i] != '\0' && ft_separator(str[i], charset) != 1) {
-      i++;
-    }
-    if (ft_separator(str[i], charset) == 1) {
-      split_len = i;
-    }
-    // printf("%d ", split_len);
-    // printf("%d ", j);
-    split[k] = malloc(sizeof(char) * 50);
-    while (j < split_len) {
-      split[k][l] = str[j];
-      j++;
-      l++;
+    if (i == str_len || ft_separator(str[i], charset) == 1) {
+      if (i - j > 0) {
+        split_len = i;
+
+        split[k] = malloc(sizeof(char) * (i - j + 1));
+
+        while (j < split_len) {
+          split[k][l] = str[j];
+          j++;
+          l++;
+        }
+        split[k][l] = '\0';
+        j++;
+        k++;
+      } else {
+        j++;
+      }
     }
     i++;
-    k++;
   }
+
   split[k] = NULL;
   return split;
 }
 
 int main(void) {
-  char *str = "maty,hattam est ;ailleurs";
+  char *str = "maty,hattam;;;;;est;;;  ;ail leurs";
   char *charset = " ,;";
 
   char **arr = ft_split(str, charset);
