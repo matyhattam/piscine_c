@@ -7,7 +7,7 @@ void ft_add_elem(t_list *list, void *data) {
   list->next = NULL;
 }
 
-t_list *ft_list_push_front(t_list **begin_list, void *data) {
+t_list *ft_list_push_front_ex(t_list **begin_list, void *data) {
   t_list *new_list = ft_create_list();
 
   if (*begin_list) {
@@ -31,7 +31,7 @@ int main(void) {
 
   t_list **p_list = &list;
   int j = 300;
-  t_list *new_current = ft_list_push_front(p_list, &j);
+  t_list *new_current = ft_list_push_front_ex(p_list, &j);
   while (new_current) {
     printf("%d ", *(int *)new_current->data);
     new_current = new_current->next;
