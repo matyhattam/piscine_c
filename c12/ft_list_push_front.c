@@ -1,10 +1,6 @@
+#include "ft_list.h"
 #include <stdio.h>
 #include <stdlib.h>
-
-typedef struct s_list {
-  void *data;
-  struct s_list *next;
-} t_list;
 
 t_list *ft_create_list() {
   t_list *list;

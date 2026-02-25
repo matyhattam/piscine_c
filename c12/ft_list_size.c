@@ -1,10 +1,6 @@
+#include "ft_list.h"
 #include <stdio.h>
 #include <stdlib.h>
-
-typedef struct s_list {
-  void *data;
-  struct s_list *next;
-} t_list;
 
 int ft_list_size(t_list *begin_list) {
   int i = 0;
