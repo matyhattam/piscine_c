@@ -16,6 +16,19 @@ int ft_strlen(char *str) {
   return i;
 }
 
+char *ft_strdup(char *src) {
+  char *dup = malloc(ft_strlen(src) + 1);
+  int i = 0;
+
+  while (src[i] != '\0') {
+    dup[i] = src[i];
+    i++;
+  }
+
+  dup[i] = '\0';
+  return dup;
+}
+
 t_list *ft_create_elem(void *data) {
   t_list *list = (t_list *)malloc(sizeof(t_list));
 
@@ -34,6 +47,7 @@ t_list *ft_create_list() {
   if (!list) {
     return (NULL);
   }
+  //   list->next = NULL;
 
   return (list);
 }
@@ -49,22 +63,19 @@ t_list *ft_list_last(t_list *begin_list) {
 }
 
 void ft_list_push_front(t_list **begin_list, void *data) {
-  t_list *new_list = ft_create_list();
 
   if (*begin_list) {
-    new_list->data = data;
+    t_list *new_list = ft_create_elem(data);
     new_list->next = *begin_list;
     *begin_list = new_list;
   }
 }
 
 void ft_list_push_back(t_list **begin_list, void *data) {
-  t_list *new_elem = ft_create_list();
+  t_list *new_elem = ft_create_elem(data);
 
   if (*begin_list) {
-    new_elem->data = data;
     new_elem->next = NULL;
-
     t_list *last_elem = ft_list_last(*begin_list);
 
     last_elem->next = new_elem;

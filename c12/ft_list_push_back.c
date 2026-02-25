@@ -2,16 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-t_list *ft_create_list() {
-  t_list *list;
-  list = malloc(sizeof(t_list));
-  if (!list) {
-    return (NULL);
-  }
-
-  return (list);
-}
-
 void ft_add_elem(t_list *list, void *data) {
   list->data = data;
   list->next = NULL;
