@@ -12,7 +12,7 @@ t_list *ft_create_list() {
   return (list);
 }
 
-void ft_create_elem(t_list *list, void *data) {
+void ft_add_elem(t_list *list, void *data) {
   list->data = data;
   list->next = NULL;
 }
@@ -20,7 +20,7 @@ void ft_create_elem(t_list *list, void *data) {
 int main(void) {
   t_list *list = ft_create_list();
   int i = 100;
-  ft_create_elem(list, &i);
+  ft_add_elem(list, &i);
 
   t_list *current = list;
   while (current) {

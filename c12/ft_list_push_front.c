@@ -2,15 +2,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void ft_create_elem(t_list *list, void *data) {
+void ft_add_elem(t_list *list, void *data) {
   list->data = data;
   list->next = NULL;
+}
+
+t_list *ft_list_push_front(t_list **begin_list, void *data) {
+  t_list *new_list = ft_create_list();
+
+  if (*begin_list) {
+    new_list->data = data;
+    new_list->next = *begin_list;
+    *begin_list = new_list;
+  }
+  return (new_list);
 }
 
 int main(void) {
   t_list *list = ft_create_list();
   int i = 100;
-  ft_create_elem(list, &i);
+  ft_add_elem(list, &i);
 
   t_list *current = list;
   while (current) {

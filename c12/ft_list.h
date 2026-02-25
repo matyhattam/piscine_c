@@ -7,6 +7,28 @@ typedef struct s_list {
   struct s_list *next;
 } t_list;
 
+int ft_strlen(char *str) {
+  int i = 0;
+
+  while (str[i] != 0) {
+    i++;
+  }
+  return i;
+}
+
+t_list *ft_create_elem(void *data) {
+  t_list *list = (t_list *)malloc(sizeof(t_list));
+
+  if (!list) {
+    return (NULL);
+  }
+
+  list->data = data;
+  list->next = NULL;
+
+  return (list);
+}
+
 t_list *ft_create_list() {
   t_list *list = (t_list *)malloc(sizeof(t_list));
   if (!list) {
@@ -26,7 +48,7 @@ t_list *ft_list_last(t_list *begin_list) {
   return (begin_list);
 }
 
-void *ft_list_push_front(t_list **begin_list, void *data) {
+void ft_list_push_front(t_list **begin_list, void *data) {
   t_list *new_list = ft_create_list();
 
   if (*begin_list) {
@@ -34,8 +56,6 @@ void *ft_list_push_front(t_list **begin_list, void *data) {
     new_list->next = *begin_list;
     *begin_list = new_list;
   }
-
-  return (new_list);
 }
 
 void ft_list_push_back(t_list **begin_list, void *data) {
