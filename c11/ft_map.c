@@ -14,7 +14,7 @@ void ft_map(int *tab, int length, int (*f)(int)) {
 int main(void) {
   int tab[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
-  ft_map(tab, 10, &ft_add_one);
+  ft_map(tab, 10, ft_add_one);
 
   int i = 0;
   while (i < 10) {
