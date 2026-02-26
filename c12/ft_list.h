@@ -42,14 +42,14 @@ t_list *ft_create_elem(void *data) {
   return (list);
 }
 
-t_list *ft_create_list() {
-  t_list *list = (t_list *)malloc(sizeof(t_list));
-  if (!list) {
-    return (NULL);
+int ft_list_size(t_list *begin_list) {
+  int i = 0;
+  while (begin_list) {
+    begin_list = begin_list->next;
+    i++;
   }
-  //   list->next = NULL;
 
-  return (list);
+  return (i);
 }
 
 t_list *ft_list_last(t_list *begin_list) {
