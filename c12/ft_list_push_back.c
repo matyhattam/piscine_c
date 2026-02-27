@@ -2,11 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void ft_add_elem(t_list *list, void *data) {
-  list->data = data;
-  list->next = NULL;
-}
-
 int main(void) {
   int i = 100;
   t_list *list = ft_create_elem(&i);
