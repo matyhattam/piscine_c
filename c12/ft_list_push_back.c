@@ -8,20 +8,14 @@ void ft_add_elem(t_list *list, void *data) {
 }
 
 int main(void) {
-  t_list *list = ft_create_list();
   int i = 100;
-  ft_add_elem(list, &i);
-
-  t_list *current = list;
-  while (current) {
-    printf("%d ", *(int *)current->data);
-    current = current->next;
-  }
+  t_list *list = ft_create_elem(&i);
 
   t_list **p_list = &list;
   int j = 300;
   ft_list_push_back(p_list, &j);
-  current = list;
+
+  t_list *current = list;
   while (current) {
     printf("%d ", *(int *)current->data);
     current = current->next;
