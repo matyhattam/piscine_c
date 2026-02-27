@@ -17,11 +17,21 @@ t_list *ft_list_push_strs(int size, char **strs) {
   return (list);
 }
 
+void ft_list_merge(t_list **begin_list, t_list *begin_list2) {
+  t_list *last = ft_list_last(*begin_list);
+
+  last->next = begin_list2;
+}
+
 int main(void) {
   char *strs[] = {"maty", "hattam", "dev", "C/C++"};
-  t_list *list = ft_list_push_strs(4, strs);
+  t_list *list_1 = ft_list_push_strs(4, strs);
+  t_list *list_2 = ft_list_push_strs(4, strs);
 
-  t_list *current = list;
+  t_list **p_list_1 = &list_1;
+  ft_list_merge(p_list_1, list_2);
+
+  t_list *current = list_1;
 
   while (current) {
     printf("%s", (char *)current->data);
