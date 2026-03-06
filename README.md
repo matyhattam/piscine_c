@@ -1,28 +1,50 @@
-# 42 Core Curriculum Projects
+# C Piscine
 
-I am currently working on this project to develop **very solid basics in C and C++**, with the objective of getting closer to **low-level programming** and eventually **embedded systems development**.
+A full completion of the **42 School C Piscine**, done independently as part of a self-study journey through the 42 cursus.
 
-The 42 program is heavy on low-level programming using C/C++, that is why I am doing all this.
-With 4 years of experience as a Python engineer, I always wanted to deep down, into low-lvl, system lvl programming, I thing that the 42 program is very good to reach this goal.
+## Context
 
-### Current Project
+I'm not a 42 School student, but I follow their curriculum on my own time to build a stronger foundation in C and low-level programming. The Piscine is the very first step of the 42 cursus — the intensive entry-level program designed to take you from zero to functional C programmer. I completed it entirely on my own, at my own pace.
 
-The current focus is on the **C Piscine exercises** provided by 42.
-These exercises are designed to strengthen:
-- C programming fundamentals
-- Memory management and pointers
-- Algorithmic thinking
-- Low-level concepts and coding discipline
+## What is the C Piscine?
+
+The 42 Piscine is an intensive series of C exercises and projects organized by difficulty across multiple "days" (shells). Each shell introduces new concepts, starting from the absolute basics and progressively covering more complex topics. There are no lectures — you learn by doing, reading the man pages, and figuring things out yourself.
 
 ## Structure
 
-- Each folder corresponds to a specific exercise or project.
-- Files follow the norms and requirements defined by 42.
+The piscine is organized into shells (days) and a few larger rush projects:
 
-## Status
+```
+piscine/
+├── c00/       # First C exercises — output functions, loops
+├── c01/       # Pointers
+├── c02/       # String manipulation
+├── c03/       # String functions (strcat, strcmp...)
+├── c04/       # Number/string conversion (atoi, putnbr...)
+├── c05/       # Recursion
+├── c06/       # argc / argv
+├── c07/       # Dynamic memory allocation
+├── c08/       # Headers and includes
+├── c09/       # Makefiles and libraries
+├── c10/       # File I/O with open, read, write
+├── c11/       # Function pointers
+├── c12/       # Linked lists
+```
 
-🚧 In progress — C Piscine exercises.
+## What I learned
+
+- Writing C from scratch with no hand-holding
+- Pointers, pointer-to-pointer, and pointer arithmetic
+- Manual memory management
+- Recursion and iterative problem solving
+- String handling without the standard library
+- Working with `argc`/`argv`
+- Dynamic allocation with `malloc` and `free`
+- Function pointers and callbacks
+- File I/O with low-level syscalls
+- Linked lists and basic data structures
+- Writing Makefiles and building static libraries
 
 ## Notes
 
-This repository is intended for learning, experimentation, and tracking progress throughout the 42 core curriculum.
+This was completed as a self-study exercise, following the 42 curriculum as a personal learning resource. I am not affiliated with 42 School.
